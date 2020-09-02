@@ -22,11 +22,13 @@ class Indicadores extends CI_Controller {
 	{	$this->load->helper('url');
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->obtener_indicador('uf','28-08-2020');
+		echo site_url('index.php?c=Indicadores&m=retornar_valor');
+
 		$this->load->view('indicadores');
 	}
-	public function retornar_valor(){
+	public function retornar_valor($id='uf'){
 		$this->load->model('indicador_model','indicador');
-		$this->indicador->obtener_indicador('uf','28-08-2020');
+		$this->indicador->obtener_indicador($id,'28-08-2020');
 	}
 	
 }
