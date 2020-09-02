@@ -24,4 +24,9 @@ class Indicadores extends CI_Controller {
 		$this->indicador->obtener_indicador('uf','28-08-2020');
 		$this->load->view('indicadores');
 	}
+	public function retornar_valor(){
+		$this->load->model('indicador_model','indicador');
+		$this->indicador->obtener_indicador('uf','28-08-2020');
+	}
+	
 }

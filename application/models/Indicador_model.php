@@ -15,8 +15,9 @@ class Indicador_model extends CI_Model {
             $json = curl_exec($curl);
             curl_close($curl);
         }
-        $dailyIndicators = json_decode($json);
-       echo $dailyIndicators->autor;
+        echo $json;
+       
+       
     }
 
 
