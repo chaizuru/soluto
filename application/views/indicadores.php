@@ -41,11 +41,8 @@
                         labels: fechas,
                         datasets: [
                             {
-                                label: 'valor',
-                                backgroundColor: '#49e2ff',
-                                borderColor: '#46d5f1',
-                                hoverBackgroundColor: '#CCCCCC',
-                                hoverBorderColor: '#666666',
+                                label: 'Valor Indicador',
+                                
                                 data: valores
                             }
                         ]
@@ -54,15 +51,33 @@
                     var graphTarget = $("#graphCanvas");
 
                     var barGraph = new Chart(graphTarget, {
-                        type: 'bar',
-                        data: chartdata
+                        type: 'line',
+                        data: chartdata,
+                        options: {
+                            
+        title: {
+            display: true,
+            text: 'Gráfico de valor de indicador escogido'
+        },scales: {
+    yAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Valor Indicador Escogido'
+      }
+    }],xAxes: [{
+      scaleLabel: {
+        display: true,
+        labelString: 'Fecha'
+      }
+    }]
+  }
+    }
                     });
                 });
             }
         }
         </script>
 
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
 <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 </body>
