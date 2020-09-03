@@ -31,5 +31,10 @@ class Indicadores extends CI_Controller {
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->obtener_indicador($tipo,$fechadesde,$fechahasta);
 	}
+
+	public function obtener_tiposindicadores(){
+		$this->load->model('indicador_model','indicador');
+		$this->indicador->obtenerTiposIndicadores();
+	}
 	
 }

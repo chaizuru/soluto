@@ -18,7 +18,7 @@ class Indicador_model extends CI_Model {
             $json = curl_exec($curl);
             curl_close($curl);
         }
-        $result3 = array();
+        $nuevaapi = array();
         $result = json_decode($json);
         $arr = array();
         $jsonfiltrado;
@@ -26,7 +26,7 @@ class Indicador_model extends CI_Model {
         
         foreach ($result->serie as $uf) {
            
-        if($uf->fecha>=$fechadesde || $uf->fecha<=$fechahasta){
+        if($uf->fecha>$fechadesde && $uf->fecha<$fechahasta){
            $myObj->fecha = $uf->fecha;
             $myObj->fecha;
             $myObj->valor = $uf->valor;
@@ -36,21 +36,35 @@ class Indicador_model extends CI_Model {
                 'fecha'    =>  date("d-m-Y", strtotime($myObj->fecha)) ,
                 'valor'  =>  $myObj->valor
             );
-            array_push($result3,$data);
+            array_push($nuevaapi,$data);
         }}
-        $myJSON = json_encode($result3);
+        $myJSON = json_encode($nuevaapi);
 
 echo $myJSON;
-       // $jsonfiltrado=json_encode($arr);
-       // echo $jsonfiltrado;
-        
+      
      
         
        
        
     }
+    public function obtenerDatosUfAjax(){
+
+    }
 
 
+    public function obtenerTiposIndicadores(){
+        $apiUrl = 'https://mindicador.cl/api';
+
+        if ( ini_get('allow_url_fopen') ) {
+            $json = file_get_contents($apiUrl);
+        }else {
+            $curl = curl_init($apiUrl);
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $json = curl_exec($curl);
+            curl_close($curl);
+        }
+        echo $json;
+    }
 
 }
 
