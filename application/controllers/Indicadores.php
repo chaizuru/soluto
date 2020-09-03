@@ -27,9 +27,10 @@ class Indicadores extends CI_Controller {
 		$this->load->view('indicadores');
 	}
 	public function retornar_valor(){
-		$id = $_GET['id'];
+		$tipo = $_GET['tipo'];
+		//$fecha= $_GET['fecha'];
 		$this->load->model('indicador_model','indicador');
-		$this->indicador->obtener_indicador($id,'28-08-2020');
+		$this->indicador->obtener_indicador($tipo,$fecha);
 	}
 	
 }
