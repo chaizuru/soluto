@@ -11,9 +11,9 @@
 <body>
 
     
-<div id="chart-container">
+<center><div id="chart-container" style="position: relative; height:40vh; width:80vw">
         <canvas id="graphCanvas"></canvas>
-    </div>
+    </div></center>
 
     <script>
         $(document).ready(function () {
