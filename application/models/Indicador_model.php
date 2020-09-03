@@ -18,21 +18,31 @@ class Indicador_model extends CI_Model {
             $json = curl_exec($curl);
             curl_close($curl);
         }
-       
+        $result3 = array();
         $result = json_decode($json);
         $arr = array();
         $jsonfiltrado;
+        $myObj = new stdClass;
+        
         foreach ($result->serie as $uf) {
            
-        if($uf->fecha>=$fechadesde && $uf->fecha<=$fechahasta)
-            echo $uf->fecha;
-            echo "::::::::::::     ";
-            //echo $uf;
-            $arr[$uf->fecha] = $uf->valor;
+        if($uf->fecha>$fechadesde && $uf->fecha<$fechahasta){
+           $myObj->fecha = $uf->fecha;
+            $myObj->fecha;
+            $myObj->valor = $uf->valor;
+          
+            $data = array(
+                'id'    =>    "1",
+                'fecha'    =>  date("Y-m-d", strtotime($myObj->fecha)) ,
+                'valor'  =>  $myObj->valor
+            );
+            array_push($result3,$data);
+        }}
+        $myJSON = json_encode($result3);
 
-        }
-        $jsonfiltrado=json_encode($arr);
-        echo $jsonfiltrado;
+echo $myJSON;
+       // $jsonfiltrado=json_encode($arr);
+       // echo $jsonfiltrado;
         
      
         

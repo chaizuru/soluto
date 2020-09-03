@@ -21,8 +21,8 @@ class Indicadores extends CI_Controller {
 	public function index()
 	{	$this->load->helper('url');
 		$this->load->model('indicador_model','indicador');
-		$this->indicador->obtener_indicador('uf','28-08-2020');
-		echo site_url('index.php?c=Indicadores&m=retornar_valor');
+		//$this->indicador->obtener_indicador('uf','28-08-2020');
+		//echo site_url('index.php?c=Indicadores&m=retornar_valor');
 
 		$this->load->view('indicadores');
 	}
