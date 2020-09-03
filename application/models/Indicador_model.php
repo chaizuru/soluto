@@ -26,7 +26,7 @@ class Indicador_model extends CI_Model {
         
         foreach ($result->serie as $uf) {
            
-        if($uf->fecha>$fechadesde && $uf->fecha<$fechahasta){
+        if($uf->fecha>=$fechadesde || $uf->fecha<=$fechahasta){
            $myObj->fecha = $uf->fecha;
             $myObj->fecha;
             $myObj->valor = $uf->valor;
