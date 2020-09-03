@@ -33,7 +33,7 @@ class Indicador_model extends CI_Model {
           
             $data = array(
                 'id'    =>    "1",
-                'fecha'    =>  date("Y-m-d", strtotime($myObj->fecha)) ,
+                'fecha'    =>  date("d-m-Y", strtotime($myObj->fecha)) ,
                 'valor'  =>  $myObj->valor
             );
             array_push($result3,$data);
