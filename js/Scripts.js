@@ -2,23 +2,24 @@
 const botonSeleccionar = document.getElementById('botonSeleccionar');
 
 
-console.log(fechaHasta);
+
 botonSeleccionar.addEventListener('click',()=>{
     const fechaDesde = document.getElementById('fechaDesde');
-    let fechaHasta = document.getElementById('fechaHasta');
+    const fechaHasta = document.getElementById('fechaHasta');
+    const tipoindicador = document.getElementById('tipoindicador');
     
-    mostrarGrafico(fechaDesde,fechaHasta);
+    mostrarGrafico(tipoindicador,fechaDesde,fechaHasta);
 })
 $(document).ready(function () {
     
     
 });
- function mostrarGrafico(fechaDesde,fechaHasta)
+ function mostrarGrafico(tipoIndicador,fechaDesde,fechaHasta)
 {
     
     {
-        console.log(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=uf&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value}`);
-        $.post(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=uf&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value})`,
+        console.log(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=${tipoIndicador.value}&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value}`);
+        $.post(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=${tipoIndicador.value}&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value})`,
         function (data)
         {
             
@@ -51,7 +52,7 @@ $(document).ready(function () {
                     
 title: {
     display: true,
-    text: 'Gráfico de valor de indicador escogido'
+    text: 'Gráfico de valor de indicador escogido  '+tipoIndicador.value
 },scales: {
 yAxes: [{
 scaleLabel: {

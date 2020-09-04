@@ -39,10 +39,19 @@
        value="2018-07-22"
        min="2018-01-01" max="2020-12-31"><br>
     <h4>Tipo de Indicador</h4>
-    <select name="select">
-  <option value="value1">Value 1</option> 
-  <option value="value2" selected>Value 2</option>
-  <option value="value3">Value 3</option>
+    <select name="select" id='tipoindicador'>
+    <option value="uf">UF</option> 
+    <option value="ivp">IVP</option>
+    <option value="dolar">DOLAR</option> 
+    <option value="dolar_intercambio">Dolar ACUERDO</option> 
+    <option value="euro">EURO</option> 
+    <option value="ipc">IPC</option>  
+    <option value="utm">UTM</option> 
+    <option value="imacec">IMACEC</option> 
+    <option value="tpm">TPM</option> 
+    <option value="libra_cobre">LIBRA COBRE</option> 
+    <option value="tasa_desempleo">TASA DESEMPLEO</option> 
+    <option value="bitcoin">BITCOIN</option> 
 </select>
     <div><br><button type="button" id='botonSeleccionar' class="btn btn-primary">Seleccionar</button>
    
