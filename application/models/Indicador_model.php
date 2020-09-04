@@ -47,7 +47,12 @@ echo $myJSON;
        
        
     }
-    public function obtenerDatosUfAjax(){
+    public function limpiarTablaUf(){
+
+
+    }
+    
+    public function insertarDatosTablaUf(){
 
     }
 
