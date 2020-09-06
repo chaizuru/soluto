@@ -95,7 +95,12 @@ echo $myJSON;
     
     }
 
-
+    public function obtenerDatosUf(){
+        $query = $this->db->get('uf');
+        
+        return $query;
+  
+    }
     
     
 

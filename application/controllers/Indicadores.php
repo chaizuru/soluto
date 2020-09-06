@@ -27,7 +27,8 @@ class Indicadores extends CI_Controller {
 	public function cruduf(){
 		$this->load->helper('url');
 		$this->load->model('indicador_model','indicador');
-		$this->load->view('cruduf');
+		$data['datos'] = $this->indicador->obtenerDatosUf();
+		$this->load->view('cruduf',$data);
 	}
 	public function retornar_valor(){
 		$this->load->helper('array');
@@ -47,5 +48,5 @@ class Indicadores extends CI_Controller {
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->insertarDatosTablaUfJSON();
 	}
-	
+
 }
