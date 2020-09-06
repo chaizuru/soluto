@@ -11,9 +11,34 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prueba Ingreso Solutoria Pablo Barría</title>
 </head>
 
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Solutoria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+      <button type="button" id="btngra" class="btn btn-primary">IR A GRÁFICO</button>
+        
+      </li>
+      <li class="nav-item">
+      <a class="nav-link" href="#">CRUD <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+    </ul>
+    
+  </div>
+</nav>
+<br>
+<center><h1>Prueba de ingreso a Solutoria - Pablo Barría (Chaizuru Github)</h1></center>
+<hr>
 <table style="width:100%" class=" table alert alert-primary">
 <thead class="thead-dark">
   <tr>
@@ -65,8 +90,6 @@ foreach($datos->result_array() as $row)
       </div>
     </div>
   </div>
-</div>
-<body>
-    
+</div>  
 </body>
 </html>

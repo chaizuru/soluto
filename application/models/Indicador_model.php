@@ -40,17 +40,10 @@ class Indicador_model extends CI_Model {
         }}
         $myJSON = json_encode($nuevaapi);
 
-echo $myJSON;
+        echo $myJSON;
       
-     
-        
-       
-       
-    }
-    public function limpiarTablaUf(){
-
-
-    }
+        }
+   
     
     public function insertarDatosTablaUfJSON(){
         
@@ -91,7 +84,7 @@ echo $myJSON;
             'fecha' => '2012-02-02',
             'valor' => '123'
     );
-    
+    header("Location: http://localhost/solutoria/index.php?c=Indicadores&m=cruduf");
     
     }
 
@@ -116,6 +109,7 @@ echo $myJSON;
     
     $this->db->where('id', $id);
     $this->db->update('uf', $data);
+    header("Location: http://localhost/solutoria/index.php?c=Indicadores&m=cruduf");
     }
     
 

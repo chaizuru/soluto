@@ -9,23 +9,34 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Prueba Ingreso Solutoria Pablo Barría</title>
 </head>
+
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Solutoria</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Gráfico <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+      <button type="button" id='botonCrud' class="btn btn-primary">IR A CRUD</button>
+      </li>
+      
+      
+    </ul>
     
-
-
-    <script>
-        
-
-
-       
-        </script>
-
-<script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-
+  </div>
+</nav>
+<br>
+<center><h1>Prueba de ingreso a Solutoria - Pablo Barría (Chaizuru Github)</h1></center>
+<hr>
   
     <div class="container">
   <div class="row">
@@ -63,7 +74,7 @@
     </div>
     </div>
     <div class="col-sm">
-      
+    
     </div>
   </div>
 </div>

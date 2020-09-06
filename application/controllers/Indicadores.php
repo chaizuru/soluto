@@ -63,9 +63,11 @@ class Indicadores extends CI_Controller {
 		$id = $_GET['id'];
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->editaruf($id,$valor);
-		header("Location: http://localhost/solutoria/index.php?c=Indicadores&m=cruduf");
+		
 
 		
 	}
+
+	
 
 }

@@ -1,7 +1,12 @@
 
 const botonSeleccionar = document.getElementById('botonSeleccionar');
 const grafico = document.getElementById('graphCanvas');
+const botonCrud = document.getElementById('botonCrud');
 
+botonCrud.addEventListener('click',()=>{
+    
+    location.href = 'http://localhost/solutoria/index.php?c=Indicadores&m=insertardatos';
+})
 
 botonSeleccionar.addEventListener('click',()=>{
     

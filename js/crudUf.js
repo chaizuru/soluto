@@ -1,3 +1,16 @@
+
+
+
+window.onload = function() {
+    const btngrafico = document.getElementById('btngra');
+    btngrafico.addEventListener('click',()=>{
+        location.href = `http://localhost/solutoria/`;
+    })
+
+  };
+
+  
+
 function eliminar(id)
   {
     location.href = `http://localhost/solutoria/index.php?c=Indicadores&m=eliminardatouf&id=${id}`;
