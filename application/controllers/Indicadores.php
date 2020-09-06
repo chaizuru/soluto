@@ -48,5 +48,14 @@ class Indicadores extends CI_Controller {
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->insertarDatosTablaUfJSON();
 	}
+	
+	public function eliminardatouf(){
+		$id=$_GET['id'];
+		$this->load->helper('url');
+		$this->load->model('indicador_model','indicador');
+		$this->indicador->eliminaruf($id);
+		$data['datos'] = $this->indicador->obtenerDatosUf();
+		$this->load->view('cruduf',$data);
+	}
 
 }

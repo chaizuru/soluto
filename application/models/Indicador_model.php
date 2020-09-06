@@ -97,9 +97,14 @@ echo $myJSON;
 
     public function obtenerDatosUf(){
         $query = $this->db->get('uf');
-        
+
         return $query;
   
+    }
+
+    public function eliminaruf($id){
+        $this->load->database('solutoria');
+        $this->db->delete('uf', array('id' => $id));  
     }
     
     
