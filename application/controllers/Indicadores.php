@@ -42,5 +42,10 @@ class Indicadores extends CI_Controller {
 		$this->load->model('indicador_model','indicador');
 		$this->indicador->obtenerTiposIndicadores();
 	}
+
+	public function insertardatos(){
+		$this->load->model('indicador_model','indicador');
+		$this->indicador->insertarDatosTablaUfJSON();
+	}
 	
 }

@@ -1,13 +1,14 @@
 
 const botonSeleccionar = document.getElementById('botonSeleccionar');
-
+const grafico = document.getElementById('graphCanvas');
 
 
 botonSeleccionar.addEventListener('click',()=>{
+    
+
     const fechaDesde = document.getElementById('fechaDesde');
     const fechaHasta = document.getElementById('fechaHasta');
     const tipoindicador = document.getElementById('tipoindicador');
-    
     mostrarGrafico(tipoindicador,fechaDesde,fechaHasta);
 })
 $(document).ready(function () {
@@ -18,8 +19,8 @@ $(document).ready(function () {
 {
     
     {
-        console.log(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=${tipoIndicador.value}&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value}`);
-        $.post(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=${tipoIndicador.value}&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value})`,
+    
+           $.post(`http://localhost/solutoria/index.php?c=Indicadores&m=retornar_valor&tipo=${tipoIndicador.value}&fechadesde=${fechaDesde.value}&fechahasta=${fechaHasta.value})`,
         function (data)
         {
             
@@ -44,7 +45,7 @@ $(document).ready(function () {
             };
 
             var graphTarget = $("#graphCanvas");
-
+            
             var barGraph = new Chart(graphTarget, {
                 type: 'line',
                 data: chartdata,
@@ -78,4 +79,25 @@ function obtenerDatos(){
             
         }, 2000);
     })
+}
+
+function limpiarGrafico(){
+    
+    var chart = new Chart(grafico, {
+       
+        type: 'line',
+    
+       
+        data: {
+            labels: [],
+            datasets: [{
+                label: '',
+                data: []
+            }]
+        },
+    
+        
+        options: {}
+    });
+    
 }
