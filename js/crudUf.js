@@ -12,6 +12,10 @@ function eliminar(id)
     txtvaloruf.value = valor;
     lbltitulomodal.innerText= `Editar UF ID ${id}`;
     $('#exampleModal').modal('show');
+    document.getElementById("btneditar").addEventListener("click", function(){
+        location.href = `http://localhost/solutoria/index.php?c=Indicadores&m=editaruf&id=${id}&valor=${txtvaloruf.value}`;
+        
+    });
     
      
   }

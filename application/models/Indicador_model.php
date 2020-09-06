@@ -107,6 +107,16 @@ echo $myJSON;
         $this->db->delete('uf', array('id' => $id));  
     }
     
+    public function editaruf($id,$valor){
+        $this->load->database('solutoria');
+        $data = array(
+            'valor' => $valor
+            
+    );
+    
+    $this->db->where('id', $id);
+    $this->db->update('uf', $data);
+    }
     
 
 }

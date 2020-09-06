@@ -61,7 +61,7 @@ foreach($datos->result_array() as $row)
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Editar</button>
+        <button type="button" id='btneditar' class="btn btn-primary">Editar</button>
       </div>
     </div>
   </div>
