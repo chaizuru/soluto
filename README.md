@@ -18,9 +18,9 @@ Sí bien En el script sql se insertan datos a la tabla uf, pero en el modelo  In
 
 
 ### Instrucciones
-1)Crear base de datos con nombre 'solutoria' en mysql
-2)Bajar y Ejecutar Script mysql de carpeta  'Script sql para mysql'
-3)Nombre usuario 'root' sin contraseña
+* Crear base de datos con nombre 'solutoria' en mysql
+* Bajar y Ejecutar Script mysql de carpeta  'Script sql para mysql'
+* Nombre usuario 'root' sin contraseña
 
 
 
