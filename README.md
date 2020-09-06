@@ -33,6 +33,7 @@ Sí bien En el script sql se insertan datos a la tabla uf, pero en el modelo  In
 | Plugin | README |
 | ------ | ------ |
 | Chartjs | [https://www.chartjs.org/samples/latest/] |
+| Bootstrap | [https://getbootstrap.com] |
 
 ### Diseño de tabla uf
 
